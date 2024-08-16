@@ -1,5 +1,7 @@
 # Video Game Sales Prediction Project
 
+Sultan Raheem, Rob Molenda, Muneeb Samad, and Ivan Cherniavskyi
+
 ## Problem Statement
 For our project, we have decided to take an incisive look at the video game industry, focusing on the task of predicting future sales. Accurate sales forecasting is essential for developers, publishers, and marketers to make informed decisions about game development and marketing strategies. Our goal is to develop a machine learning model that predicts future video game sales based on historical data. We’ll analyze key factors such as genre, platform, region, release timing, along with economic conditions, to create a predictive model that provides valuable insights.
 
