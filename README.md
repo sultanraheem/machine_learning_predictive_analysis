@@ -1,4 +1,6 @@
-# Video Game Sales Prediction Project
+# machine_learning_predictive_analysis
+
+Video Game Sales Prediction Project
 
 # Contributors  
 Sultan Raheem, Rob Molenda, Muneeb Samad, and Ivan Cherniavskyi
