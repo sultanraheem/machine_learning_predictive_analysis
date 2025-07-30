@@ -85,6 +85,8 @@ Located in: `visualization.ipynb`
 ```bash
 pip install pandas matplotlib seaborn plotly wordcloud
 
+---
+
 Key Visualizations
 Top-Selling Games: Bar chart of top 10 games globally
 
