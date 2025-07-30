@@ -84,6 +84,7 @@ Located in: `visualization.ipynb`
 
 ```bash
 pip install pandas matplotlib seaborn plotly wordcloud
+
 Key Visualizations
 Top-Selling Games: Bar chart of top 10 games globally
 
@@ -106,22 +107,22 @@ Regional Sales Heatmap: Sales visualization across regions
 Statistical Analysis
 Descriptive Stats: Mean, median, mode for all sales columns
 
-Range: Sales range from minimal to 82.73M units
+Range: Sales range from minimal to 82.73 million units
 
 Variance: 2.45
 
 Standard Deviation: 1.57
 
-IQR: 0.42
+Interquartile Range (IQR): 0.42
 
-All findings are supported with visualizations and tables
+Visualizations and tables support these findings
 
 Key Findings
 Genre Popularity: Sports dominates, followed by Role-Playing and Platform genres
 
-Platform Evolution: Rise/fall of Wii, NES, PlayStation series
+Platform Evolution: Rise and fall of Wii, NES, PlayStation series
 
-Regional Preferences: Japan favors Role-Playing; North America prefers Sports/Action
+Regional Preferences: Japan favors Role-Playing; North America prefers Sports and Action
 
 Sales Variability: Large disparity between top-selling games and the average
 
@@ -130,29 +131,29 @@ Located in: data_prep.ipynb
 
 Features
 Video Game Sales Data
-Missing Year: Filled with median
+Filled missing values in Year with median
 
-Missing Publisher: Filled with mode
+Filled missing values in Publisher with mode
 
-Type Conversion: Year converted to integer
+Converted Year column to integer
 
-Storage: Stored as data table in games_data.sqlite
+Stored cleaned data in SQLite table data
 
 GDP Data
-Cleaned: Dropped unnecessary columns
+Dropped unnecessary columns
 
-Transposed: Converted to long format
+Transposed to long format
 
-Aggregated: Summed GDP per year
+Summed GDP per year
 
-Storage: Stored as gdp table
+Stored aggregated data in SQLite table gdp
 
 Population Data
-Cleaned: Similar steps as GDP
+Similar cleaning as GDP data
 
-Mean Calculated: For each year across all countries
+Calculated mean population per year
 
-Storage: Stored as population table
+Stored aggregated data in SQLite table population
 
 Requirements
 bash
@@ -160,11 +161,11 @@ Copy
 Edit
 pip install pandas sqlite3
 How to Use
-Place vgsales.csv, GDP.csv, and Population.csv in the correct directory
+Place vgsales.csv, GDP.csv, and Population.csv in the working directory
 
 Run data_prep.ipynb
 
-Output: games_data.sqlite with tables:
+The cleaned data will be saved in games_data.sqlite with tables:
 
 data
 
@@ -176,65 +177,69 @@ Modeling
 Located in: modelling.ipynb
 
 Workflow
-Data Loaded: From games_data.sqlite
+Load data from games_data.sqlite
 
-Inspection: Dataset preview and basic stats
+Inspect datasets and calculate summary statistics
 
-Cleaning: Null handling, type fixes
+Handle missing values and fix data types
 
-Feature Engineering: Normalized sales, GDP/population ratios
+Engineer new features for model inputs
 
-Models Tested:
+Train and evaluate models:
 
-Linear Regression:
+Linear Regression
 
 R²: Low
 
 MSE: High
 
-Decision Tree Regression:
+Decision Tree Regression
 
-Slightly better R², still poor
+Slightly better R², but still poor
 
-Neural Network (TensorFlow):
+High MSE
 
-R² still unsatisfactory
+Neural Network (TensorFlow)
+
+R² remained unsatisfactory
 
 High MSE
 
 Evaluation Summary
-Low R² across all models
+All models had low R² scores, indicating poor fit
 
-High MSE, indicating large prediction errors
+High MSE values show large prediction errors
 
-Predictive models underperformed
+Predictive accuracy was inadequate
 
-Potential Causes
-Limited Features: Lacked behavioral/marketing data
+Possible Reasons for Poor Performance
+Limited feature set (lack of marketing, quality, or consumer behavior data)
 
-Data Quality: Missing/incomplete values
+Data quality issues such as missing or inconsistent data
 
-Model Complexity: More advanced models or different techniques may be needed
+Model complexity may need enhancement or different approaches
 
 Prerequisites
 bash
 Copy
 Edit
 pip install pandas numpy sqlite3 scikit-learn tensorflow matplotlib
-Usage
-Prepare your environment and place SQLite database in the correct path
+Usage Instructions
+Ensure all required libraries are installed
 
-Run modelling.ipynb step by step
+Place games_data.sqlite in your working directory
 
-Review R² and MSE outputs to assess model performance
+Run modelling.ipynb or the Python scripts step-by-step
+
+Review output metrics (R², MSE) to evaluate model performance
 
 Conclusion
-This project developed a full pipeline for video game sales forecasting, including data acquisition, visualization, preprocessing, and predictive modeling.
+This project covers a complete pipeline for video game sales forecasting — from data gathering and cleaning to visualization and modeling.
 
-Despite thorough analysis, the models did not perform well, highlighting:
+Despite comprehensive efforts, the predictive models underperformed, underscoring:
 
-The complexity of sales prediction
+The complexity inherent in forecasting video game sales
 
-The need for more comprehensive and granular features
+The necessity for additional features and better data quality
 
-Opportunities for further research in feature engineering, data augmentation, and alternative modeling techniques
+Opportunities for further model refinement and feature engineering
